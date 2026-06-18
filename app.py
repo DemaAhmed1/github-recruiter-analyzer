@@ -16,10 +16,18 @@ def analyze():
     response = requests.get(url)
     data = response.json()
 
-    # حساب السكور
+    # سكّور
     score = (data.get("public_repos", 0) * 2) + (data.get("followers", 0) * 1)
 
-    # احتفال إذا السكور عالي
+    # مستوى الحساب
+    if score >= 50:
+        level = "Pro 🔥"
+    elif score >= 20:
+        level = "Intermediate 🟡"
+    else:
+        level = "Beginner 🟢"
+
+    # احتفال
     celebrate = score >= 50
 
     return render_template(
@@ -29,6 +37,7 @@ def analyze():
         repos=data.get("public_repos"),
         avatar=data.get("avatar_url"),
         score=score,
+        level=level,
         celebrate=celebrate
     )
 
