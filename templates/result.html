@@ -1,94 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>GitHub Analysis</title>
+<title>Result</title>
+
 <style>
 body {
-font-family: Arial;
-background: #0d1117;
-color: white;
+font-family: Arial, sans-serif;
 text-align: center;
-padding: 30px;
+background: linear-gradient(to right, #f5f5f5, #dfe9f3);
+margin-top: 80px;
 }
 
 .card {
-background: #161b22;
+background: white;
+display: inline-block;
 padding: 20px;
-border-radius: 15px;
-width: 300px;
-margin: auto;
-box-shadow: 0 0 10px rgba(255,255,255,0.1);
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 img {
 border-radius: 50%;
-width: 120px;
-}
-
-.score {
-font-size: 20px;
-color: #00ff88;
 margin-top: 10px;
 }
 
-a {
-color: #58a6ff;
-text-decoration: none;
-display: block;
-margin-top: 15px;
+footer {
+margin-top: 60px;
+font-size: 14px;
+color: gray;
 }
 </style>
 </head>
+
 <body>
 
-<h1>GitHub Analysis</h1>
-<style>
-body.gold {
-background: linear-gradient(45deg, #FFD700, #FFF8DC);
-}
-
-body.silver {
-background: linear-gradient(45deg, #C0C0C0, #F5F5F5);
-}
-
-body.bronze {
-background: linear-gradient(45deg, #CD7F32, #FFE4C4);
-}
-
-h2 {
-font-size: 24px;
-text-align: center;
-margin-top: 20px;
-}
-</style>
 <div class="card">
-
-<img src="{{ avatar }}">
-
 <h2>{{ name }}</h2>
 
+<img src="{{ avatar }}" width="120">
+
 <p>Followers: {{ followers }}</p>
-
-<p>Public Repositories: {{ repos }}</p>
-
-<div class="score">
-Score: {{ score }}
+<p>Public Repos: {{ repos }}</p>
+<p>Score: {{ score }}</p>
 </div>
 
-<a href="/">Back</a>
-<p> Level:{{Level}}</p>
- <P>  Score:{{score}}</p>
-    <body class=""{{level}}"">
-<h2>{{message }}</h2>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<footer>
+<p>© 2026 Dema Ahmed - All rights reserved</p>
+</footer>
 
-<script>
-confetti({
-particleCount: 150,
-spread: 90,
-origin: { y: 0.6 }
-});
-</script>
 </body>
 </html>
