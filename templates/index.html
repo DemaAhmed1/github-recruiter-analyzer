@@ -5,72 +5,67 @@
 
 <style>
 body {
-margin: 0;
-font-family: Arial;
-background: linear-gradient(135deg, #0f172a, #1e293b);
-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-}
-
-.box {
-background: #111827;
-padding: 30px;
-border-radius: 15px;
-box-shadow: 0 0 20px rgba(0,0,0,0.5);
-width: 350px;
+font-family: Arial, sans-serif;
 text-align: center;
+margin-top: 80px;
+background-color: #f5f5f5;
 }
 
 input {
-width: 90%;
 padding: 10px;
-margin-top: 15px;
-border: none;
-border-radius: 8px;
+width: 250px;
+margin: 10px;
 }
 
 button {
-margin-top: 15px;
 padding: 10px 20px;
-border: none;
-border-radius: 8px;
-background: #3b82f6;
+background-color: black;
 color: white;
+border: none;
 cursor: pointer;
 }
 
 button:hover {
-background: #2563eb;
+background-color: gray;
 }
 
-h1 {
-font-size: 22px;
-}
-
-p {
+footer {
+margin-top: 60px;
 font-size: 14px;
-color: #cbd5e1;
+color: gray;
+}
+
+a {
+color: #333;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
 }
 </style>
 </head>
+
 <body>
 
-<div class="box">
-
 <h1>GitHub Recruiter Analyzer</h1>
+<p>Enter GitHub username to analyze</p>
 
-<p>Analyze any GitHub profile like a recruiter</p>
-
-<form action="/analyze" method="POST">
-<input type="text" name="username" placeholder="Enter GitHub Username" required>
+<form method="POST" action="/analyze">
+<input type="text" name="username" placeholder="GitHub Username" required>
 <br>
 <button type="submit">Analyze</button>
 </form>
 
-</div>
+<footer>
+<p>© 2026 Dema Ahmed - All rights reserved</p>
+<p>
+GitHub:
+<a href="https://github.com/DemaAhmed1" target="_blank">
+DemaAhmed1
+</a>
+</p>
+</footer>
 
 </body>
 </html>
