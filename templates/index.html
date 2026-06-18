@@ -7,43 +7,48 @@
 body {
 font-family: Arial, sans-serif;
 text-align: center;
-background: linear-gradient(to right, #f5f5f5, #dfe9f3);
+background: #0f172a; /* غامق */
+color: white;
 margin-top: 100px;
 }
 
 h1 {
-color: #333;
+color: #38bdf8;
 }
 
 input {
 padding: 12px;
 width: 260px;
-border: 1px solid #ccc;
-border-radius: 5px;
+border: none;
+border-radius: 6px;
+outline: none;
 }
 
 button {
 padding: 12px 25px;
-background-color: black;
-color: white;
+background: #38bdf8;
+color: black;
 border: none;
-border-radius: 5px;
+border-radius: 6px;
 margin-top: 10px;
 cursor: pointer;
+font-weight: bold;
+transition: 0.3s;
 }
 
 button:hover {
-background-color: #333;
+background: #0ea5e9;
+transform: scale(1.05);
 }
 
 footer {
 margin-top: 80px;
 font-size: 14px;
-color: gray;
+color: #94a3b8;
 }
 
 a {
-color: #333;
+color: #38bdf8;
 text-decoration: none;
 }
 
@@ -60,12 +65,12 @@ text-decoration: underline;
 
 <form method="POST" action="/analyze">
 <input type="text" name="username" placeholder="GitHub Username" required>
-<br>
-<button type="submit">Analyze</button>
+<br><br>
+<button type="submit">Analyze 🚀</button>
 </form>
 
 <footer>
-<p>© 2026 Dema Ahmed - All rights reserved</p>
+<p>© 2026 Dema Ahmed</p>
 <p>
 GitHub:
 <a href="https://github.com/DemaAhmed1" target="_blank">
