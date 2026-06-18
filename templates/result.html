@@ -15,9 +15,15 @@ margin-top: 80px;
 .card {
 background: #1e293b;
 display: inline-block;
-padding: 25px;
-border-radius: 12px;
-box-shadow: 0 0 20px rgba(56,189,248,0.2);
+padding: 30px;
+border-radius: 15px;
+box-shadow: 0 0 25px rgba(56,189,248,0.3);
+animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+from { transform: scale(0.8); opacity: 0; }
+to { transform: scale(1); opacity: 1; }
 }
 
 img {
@@ -25,12 +31,26 @@ border-radius: 50%;
 margin-top: 10px;
 }
 
-p {
-color: #cbd5e1;
-}
-
 h2 {
 color: #38bdf8;
+}
+
+.score {
+font-size: 22px;
+font-weight: bold;
+margin-top: 10px;
+}
+
+.high {
+color: #22c55e;
+}
+
+.medium {
+color: #facc15;
+}
+
+.low {
+color: #ef4444;
 }
 </style>
 </head>
@@ -43,7 +63,15 @@ color: #38bdf8;
 
 <p>Followers: {{ followers }}</p>
 <p>Public Repos: {{ repos }}</p>
-<p>Score: {{ score }}</p>
+
+<div class="score
+{% if score >= 50 %}high
+{% elif score >= 20 %}medium
+{% else %}low
+{% endif %}
+">
+Score: {{ score }}
+</div>
 </div>
 
 </body>

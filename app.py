@@ -16,6 +16,7 @@ def analyze():
     ).json()
 
     score = (data.get("public_repos", 0) * 2) + (data.get("followers", 0) * 1)
+    celebrate=score >=50
 
     if score >= 100:
         level = "gold"
@@ -36,6 +37,7 @@ def analyze():
         score=score,
         message=message,
         level=level
+        celebrate=celebrate
     )
 
 if __name__ == "__main__":
