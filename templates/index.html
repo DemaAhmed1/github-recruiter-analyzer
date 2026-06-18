@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GitHub Recruiter Analyzer</title>
+
+<style>
+body {
+margin: 0;
+font-family: Arial;
+background: linear-gradient(135deg, #0f172a, #1e293b);
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+.box {
+background: #111827;
+padding: 30px;
+border-radius: 15px;
+box-shadow: 0 0 20px rgba(0,0,0,0.5);
+width: 350px;
+text-align: center;
+}
+
+input {
+width: 90%;
+padding: 10px;
+margin-top: 15px;
+border: none;
+border-radius: 8px;
+}
+
+button {
+margin-top: 15px;
+padding: 10px 20px;
+border: none;
+border-radius: 8px;
+background: #3b82f6;
+color: white;
+cursor: pointer;
+}
+
+button:hover {
+background: #2563eb;
+}
+
+h1 {
+font-size: 22px;
+}
+
+p {
+font-size: 14px;
+color: #cbd5e1;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h1>GitHub Recruiter Analyzer</h1>
+
+<p>Analyze any GitHub profile like a recruiter</p>
+
+<form action="/analyze" method="POST">
+<input type="text" name="username" placeholder="Enter GitHub Username" required>
+<br>
+<button type="submit">Analyze</button>
+</form>
+
+</div>
+
+</body>
+</html>
